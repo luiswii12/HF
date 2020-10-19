@@ -914,10 +914,32 @@ You can find the code of your language here - https://www.w3schools.com/tags/ref
         <!-- End Foter -->
         
         
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=524451412064&text=hola%20me%20interesa%20una%20marca%20de%20ropa" class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
+         <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="106195141252615"
+  theme_color="#D3D3D3"
+  logged_in_greeting="Hola buen dia como podemos ayudarle el dia de hoy ?"
+  logged_out_greeting="Hola buen dia como podemos ayudarle el dia de hoy ?">
+      </div>
     
     
     </div>
